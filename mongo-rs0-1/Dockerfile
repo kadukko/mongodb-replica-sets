@@ -2,7 +2,7 @@ FROM mongo
 
 WORKDIR /usr/src/configs
 
-COPY mongo.conf
+COPY mongo.conf .
 
 EXPOSE 27017
 
