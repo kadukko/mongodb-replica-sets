@@ -1,8 +1,7 @@
 FROM mongo
 
 WORKDIR /usr/src/configs
-
+ 
 COPY replicaSet.js .
-COPY setup.sh .
 
-CMD ["./setup.sh"]
+ENTRYPOINT ["mongo", "mongodb://mongo-rs0-1:27017", "replicaSet.js"]
